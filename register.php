@@ -1,47 +1,58 @@
-<?php
-  //Allow config
-  define('__CONFIG__',true);
-  //Require config
-  require_once "inc/config.php"; 
+<?php 
+
+	// Allow the config
+	define('__CONFIG__', true);
+	// Require the config
+	require_once "inc/config.php"; 
+
 ?>
+
 <!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="follow">
 
-</head>
-<body>
+    <title>Page Title</title>
 
-<div class="uk-section uk-container">
-    <div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1" ukgrid="">
-	<form class="uk-form-stacked js-register">
+    <base href="/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
+  </head>
 
-    <h1> Register </h1>
-    <div class="uk-margin">
-        <label class="uk-form-label">Email</label>
-        <div class="uk-form-controls">
-        <input class="uk-input uk-form-width-medium uk-form-large" type="text" required ='required' placeholder="someemail@example.com">
-    </div>
-</div>
+  <body>
 
-    <div class="uk-margin">
-        <label class="uk-form-label">Password</label>
-        <div class="uk-form-controls">
-        <input class="uk-input uk-form-width-medium" type="password" placeholder="Password">
-    </div>
-</div>
+  	<div class="uk-section uk-container">
+  		<div class="uk-grid uk-child-width-1-3@s uk-child-width-1-1" uk-grid>
+			<form class="uk-form-stacked js-register">
+				
+				<h2>Register</h2>
 
-    <div class="uk-margin">
-         <button class="uk-button uk-button-default" type="submit">Register</button>
-    </div>
+			    <div class="uk-margin">
+			        <label class="uk-form-label" for="form-stacked-text">Email</label>
+			        <div class="uk-form-controls">
+			            <input class="uk-input" id="form-stacked-text" type="email" required='required' placeholder="email@email.com">
+			        </div>
+			    </div>
 
+			    <div class="uk-margin">
+			        <label class="uk-form-label" for="form-stacked-text">Passphrase</label>
+			        <div class="uk-form-controls">
+			            <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Your passphrase">
+			        </div>
+			    </div>
 
-</form>
-</div>
-</div>
+			    <div class="uk-margin uk-alert uk-alert-danger js-error" style='display: none;'></div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+			    <div class="uk-margin">
+			        <button class="uk-button uk-button-default" type="submit">Register</button>
+			    </div>
 
-</body>
+			</form>
+  		</div>
+  	</div>
+
+  	<?php require_once "inc/footer.php"; ?> 
+  </body>
 </html>

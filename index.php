@@ -1,35 +1,38 @@
-<?php
-  //Allow config
-  define('__CONFIG__',true);
-  //Require config
-  require_once "inc/config.php"; 
+<?php 
+
+	// Allow the config
+	define('__CONFIG__', true);
+	// Require the config
+	require_once "inc/config.php"; 
+
 ?>
 <!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="follow">
 
-</head>
-<body>
+    <title>Page Title</title>
 
-<div class="uk-section uk-container">
-    <?php
+    <base href="/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
+  </head>
 
-       echo "Hello World. Today's date is: ";
-       echo date("Y m d");
+  <body>
 
-       ?>
+  	<div class="uk-section uk-container">
+  		<?php 
+  			echo "Hello world. Today is: ";
+  			echo date("Y m d");
+  		?> 
+  		<p>
+  			<a href="/login.php">Login</a>
+  			<a href="/register.php">Register</a>
+  		</p>
+  	</div>
 
-       <p>
-        <a href="login.php">Login</a>
-        <a href="register.php">Register</a>
-    </p>
-
-
-    </div>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
-
-</body>
+  	<?php require_once "inc/footer.php"; ?> 
+  </body>
 </html>
